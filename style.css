@@ -9,6 +9,14 @@
   --color-primary-color: #e86a33;
   --color-white: white;
   --color-btn-background-hover: #d45b2b;
+  --color-border-color: #eadbc8;
+  --color-answer-background-hover: #eadbc8;
+  --color-background-correct-answer: #e6fff0;
+  --color-border-correct-answer: #a3f0c4;
+  --color-text-correct-answer: #28a745;
+  --color-background-incorrect-answer: #fff0f0;
+  --color-border-incorrect-answer: #ffbdbd;
+  --color-text-incorrect-answer: #dc3545;
 }
 
 body {
@@ -32,13 +40,17 @@ body {
   padding: 2rem;
 }
 
-/* start screen */
+/*------------------------------------------ start screen -------------------------------------------------------------------*/
 
 #start-screen h1 {
   margin-bottom: 1rem;
   color: var(--color-primary-color);
   font-size: 2rem;
   font-weight: bold;
+}
+
+#start-screen {
+  display: none;
 }
 
 #start-screen p {
@@ -53,8 +65,72 @@ body {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--color-btn-background-hover);
+}
+
+/*-------------------------------------------- quiz screen ------------------------------------------------------- */
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-header h2 {
+  margin-bottom: 2rem;
+}
+
+.quiz-header {
+  margin-bottom: 1rem;
+}
+
+.quiz-answers {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background-color: var(--color-back-ground);
+  border-radius: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  width: 25%;
+  background-color: var(--color-primary-color);
+  border-radius: 0.5rem;
+  transition: width 0.3s ease;
+}
+
+.answer-btn {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-border-color);
+  background-color: var(--color-back-ground);
+  padding: 0.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+  background-color: var(--color-answer-background-hover);
+}
+
+.answer-btn.correct {
+  border-color: var(--color-border-correct-answer);
+  background-color: var(--color-background-correct-answer);
+  color: var(--color-text-correct-answer);
+}
+
+.answer-btn.incorrect {
+  border-color: #ffbdbd;
+  background-color: #fff0f0;
+  color: #dc3545;
 }
