@@ -49,7 +49,8 @@ body {
   font-weight: bold;
 }
 
-#start-screen {
+#start-screen,
+#quiz-screen {
   display: none;
 }
 
@@ -133,4 +134,32 @@ body {
   border-color: #ffbdbd;
   background-color: #fff0f0;
   color: #dc3545;
+}
+
+/*-------------------------------------------- result screen ------------------------------------------------------- */
+
+#result-screen h2,
+.results-info h3 {
+  color: var(--color-primary-color);
+}
+
+#result-screen h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.results-info h3 {
+  font-size: 1.5rem;
+}
+
+.results-info {
+  background-color: var(--color-back-ground);
+  padding: 36px 36px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.results-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
