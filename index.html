@@ -15,47 +15,60 @@
   </head>
   <body class="">
     <div class="container">
-      <div class="screen" id="start-screen">
+      <!-- ---------------------------------- start screen------------------------------------------ -->
+      <div class="screen display" id="start-screen">
         <h1>Quiz Time</h1>
         <p class="text-secondary">
           Test your knowledge with these fun questions
         </p>
-        <button class="btn">Start Quiz</button>
+        <button class="btn" id="start-btn">Start Quiz</button>
       </div>
 
-      <div class="screen" id="quiz-screen">
+      <!-- ---------------------------------- start screen------------------------------------------ -->
+
+      <!-- ---------------------------------- quiz screen------------------------------------------ -->
+
+      <div class="screen vanish" id="quiz-screen">
         <div class="quiz-header">
-          <h2 class="question-text">what is the chemical symbol of gold?</h2>
+          <h2 id="question-text"></h2>
 
           <div class="quiz-info text-secondary">
-            <p>Question <span>5</span> of <span>5</span></p>
-            <p>score:<span>1</span></p>
+            <p>
+              Question <span id="current-question">5</span> of
+              <span id="total-questions">5</span>
+            </p>
+            <p>score:<span id="score">1</span></p>
           </div>
         </div>
 
-        <div class="quiz-answers">
-          <button class="answer-btn">GO</button>
-          <button class="answer-btn">Au</button>
-          <button class="answer-btn">Zi</button>
-          <button class="answer-btn">Fe</button>
-        </div>
+        <div id="answers-container"></div>
 
         <div class="progress-bar">
-          <div class="progress"></div>
+          <div id="progress"></div>
         </div>
       </div>
 
-      <div class="screen" id="result-screen">
+      <!-- ---------------------------------- quiz screen------------------------------------------ -->
+
+      <!-- ---------------------------------- result screen------------------------------------------ -->
+
+      <div class="screen vanish" id="result-screen">
         <h2>Quiz Results</h2>
 
         <div class="results-info">
-          <p>you scored <span>3</span> out of <span>5</span></p>
+          <p>
+            you scored <span id="final-score">0</span> out of
+            <span id="max-score">0</span>
+          </p>
           <h3>Goodjob!</h3>
         </div>
 
-        <button class="btn">Restart Quiz</button>
+        <button class="btn" id="restart-btn">Restart Quiz</button>
       </div>
     </div>
+
+    <!-- ---------------------------------- result screen------------------------------------------ -->
+
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

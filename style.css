@@ -40,6 +40,14 @@ body {
   padding: 2rem;
 }
 
+.vanish {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
 /*------------------------------------------ start screen -------------------------------------------------------------------*/
 
 #start-screen h1 {
@@ -47,11 +55,6 @@ body {
   color: var(--color-primary-color);
   font-size: 2rem;
   font-weight: bold;
-}
-
-#start-screen,
-#quiz-screen {
-  display: none;
 }
 
 #start-screen p {
@@ -88,7 +91,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.quiz-answers {
+#answers-container {
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -102,9 +105,9 @@ body {
   border-radius: 0.5rem;
 }
 
-.progress {
+#progress {
   height: 100%;
-  width: 25%;
+  width: 0%;
   background-color: var(--color-primary-color);
   border-radius: 0.5rem;
   transition: width 0.3s ease;
